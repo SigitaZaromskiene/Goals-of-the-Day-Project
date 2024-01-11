@@ -1,0 +1,21 @@
+.button {
+  background-color: $yellow;
+  font-size: 1.2rem;
+  border: none;
+  border-radius: 15px;
+  padding: 5px;
+  cursor: pointer;
+  color: $darkBlue;
+
+  &:hover {
+    background-color: lighten($yellow, 10%);
+  }
+
+  &_long {
+    width: 100%;
+  }
+
+  &_short {
+    width: 100px;
+  }
+}

@@ -1,0 +1,19 @@
+.goals_container {
+  background-color: $darkBlue;
+  margin-top: 40px;
+  border-radius: 15px;
+  padding: 40px;
+  @include flex(center, center, column, 40px);
+
+  &_goal {
+    @include flex(center, center, column, 10px);
+  }
+  li {
+    @include flex(space-between, center, row, 30px);
+    padding: 0px 20px;
+    height: 80px;
+    width: 100%;
+    border-radius: 15px;
+    background-color: $middleBlue;
+  }
+}

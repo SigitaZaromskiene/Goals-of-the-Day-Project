@@ -1,0 +1,13 @@
+.modal_container {
+  border-radius: 15px;
+  margin-top: 20px;
+  font-weight: 600;
+
+  &_start {
+    border-bottom: 1px solid white;
+  }
+
+  &_warning {
+    color: crimson;
+  }
+}
