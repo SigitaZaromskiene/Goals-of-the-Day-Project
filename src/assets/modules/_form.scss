@@ -1,0 +1,14 @@
+.form {
+  @include flex(center, center, column, 50px);
+  padding-top: 50px;
+
+  &_container {
+    @include flex(center, flex-start, column, 10px);
+    width: 100%;
+  }
+
+  &_input {
+    padding: 5px;
+    width: 100%;
+  }
+}
