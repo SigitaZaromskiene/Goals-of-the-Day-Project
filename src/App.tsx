@@ -28,7 +28,7 @@ function App() {
   return (
     <>
       <Container>
-        <AddFormGoal setGoal={setGoalHandler} />
+        <AddFormGoal setGoal={setGoalHandler} goal={goal} />
         <Modal
           text="Start setting goals"
           className="modal_container_start"

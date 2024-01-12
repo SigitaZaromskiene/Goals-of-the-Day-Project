@@ -1,12 +1,14 @@
 import FormInput from "../components/FormInput";
 import Button from "./Button";
 import { useRef, FormEvent, useState } from "react";
+import { Goal } from "../App";
 
 type AddFormGoalProps = {
   setGoal: (name: string, description: string) => void;
+  goal: Goal[];
 };
 
-export default function AddFormGoal({ setGoal }: AddFormGoalProps) {
+export default function AddFormGoal({ setGoal, goal }: AddFormGoalProps) {
   const [disabled, setDisabled] = useState(true);
   const goalInput = useRef<HTMLInputElement>(null);
   const descriptionInput = useRef<HTMLInputElement>(null);
@@ -17,9 +19,14 @@ export default function AddFormGoal({ setGoal }: AddFormGoalProps) {
     const goalValue = goalInput.current?.value || "";
     const desValue = descriptionInput.current?.value || "";
 
-    setGoal(goalValue, desValue);
-    setDisabled(true);
+    if (goal.length === 4) {
+      e.currentTarget.reset();
+      return;
+    }
 
+    setGoal(goalValue, desValue);
+
+    setDisabled(true);
     e.currentTarget.reset();
   };
 
