@@ -3,6 +3,7 @@
   "private": true,
   "version": "0.0.0",
   "type": "module",
+  "homepage": "https://sigitazaromskiene.github.io/Goals-of-the-Day-Project/",
   "scripts": {
     "dev": "vite",
     "build": "tsc && vite build",
@@ -11,7 +12,6 @@
     "predeploy": "npm run build",
     "deploy": "gh-pages -d dist"
   },
-  "homepage": "https://sigitazaromskiene.github.io/Goals-of-the-Day-Project/",
   "dependencies": {
     "react": "^18.2.0",
     "react-dom": "^18.2.0",
